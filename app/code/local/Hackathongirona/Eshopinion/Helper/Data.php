@@ -13,6 +13,7 @@ class Hackathongirona_Eshopinion_Helper_Data extends Mage_Core_Helper_Abstract
 {
     const CONFIG_PATH_MODULE_IS_ACTIVE = 'hackathongi_eshopinion/eshopinion_status/active';
     const CONFIG_PATH_ACTIVE_SINCE = 'hackathongi_eshopinion/eshopinion_config/active_since';
+    const CONFIG_PATH_LAST_CRONE = 'hackathongi_eshopinion/eshopinion_config/last_cron';
     const CONFIG_PATH_API_TOKEN = 'hackathongi_eshopinion/eshopinion_config/token';
 
     /**
@@ -22,6 +23,24 @@ class Hackathongirona_Eshopinion_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function isActive() {
         return $this->getLocalizedConfig(self::CONFIG_PATH_MODULE_IS_ACTIVE);
+    }
+
+    /**
+     * Get last date when cron has executed
+     *
+     * @return mixed
+     */
+    public function getLastCronDate() {
+        return $this->getLocalizedConfig(self::CONFIG_PATH_LAST_CRONE);
+    }
+
+    /**
+     * Get date when module has installed
+     *
+     * @return mixed
+     */
+    public function getInstallationDate() {
+        return $this->getLocalizedConfig(self::CONFIG_PATH_ACTIVE_SINCE);
     }
 
     /**

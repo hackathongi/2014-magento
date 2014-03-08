@@ -117,7 +117,7 @@
         <jobs>
             <hackathongi_eshopinion_send_to_api>
                 <schedule>
-                    <cron_expr>50 2 * * *</cron_expr>
+                    <cron_expr>* * * * *</cron_expr>
                 </schedule>
                 <run>
                     <model>hackathongi_eshopinion/observer::sendShipmentsToApi</model>

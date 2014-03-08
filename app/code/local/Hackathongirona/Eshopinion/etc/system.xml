@@ -73,6 +73,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </active_since>
+                        <last_cron translate="label comment">
+                            <label><![CDATA[Last cron date]]></label>
+                            <comment><![CDATA[Date in GMT. Latest day executed cron for send shipments to api.]]></comment>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </last_cron>
                     </fields>
                 </eshopinion_config>
             </groups>

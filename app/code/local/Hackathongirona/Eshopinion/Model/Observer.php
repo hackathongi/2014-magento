@@ -25,8 +25,11 @@ class Hackathongirona_Eshopinion_Model_Observer
         /** @var Hackathongirona_Eshopinion_Model_Eshopinion $model */
         $model = Mage::getModel('hackathongi_eshopinion/eshopinion');
 
-        if ($this->isActive() && $shipmentIds = $model->checkShippings()) {
-            $this->_sendTrustedRatingMails($shipmentIds);
+
+        $latestShipments = $model->shipmentsAfterLastCron();
+
+        if ($this->getHelper()->isActive() && $latestShipments) {
+            // @todo: SEND SHIPMENTS TO API
         }
     }
 }
