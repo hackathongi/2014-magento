@@ -11,7 +11,7 @@
 
 class Hackathongirona_Eshopinion_Model_Observer
 {
-    const API_URL = 'http://api.eshopinion.cat/shops/order/{{token}}';
+    const API_URL = 'http://api-test.eshopinion.com/shops/order/{{token}}';
 
     /** @var Hackathongirona_Eshopinion_Helper_Data  $helper */
     private $helper;
