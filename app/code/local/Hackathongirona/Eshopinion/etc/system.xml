@@ -12,15 +12,15 @@
 -->
 <config>
     <tabs>
-        <eshopinion translate="label" module="hackathongi_eshopinion">
+        <hackatongirona translate="label" module="hackathongi_eshopinion">
             <label>Hackathon Girona</label>
             <sort_order>100</sort_order>
-        </eshopinion>
+        </hackatongirona>
     </tabs>
     <sections>
         <hackathongi_eshopinion translate="label" module="hackathongi_eshopinion">
             <label>Eshopinion Service</label>
-            <tab>eshopinion</tab>
+            <tab>hackatongirona</tab>
             <frontend_type>text</frontend_type>
             <sort_order>208</sort_order>
             <show_in_default>1</show_in_default>
