@@ -16,8 +16,9 @@ class Hackathongirona_Eshopinion_Model_Mysql4_Eshopinion_Collection extends Mage
      *
      * @return void
      */
-    protected function _construct()
-    {
-        $this->_init('trustedrating/mail');
+    public function _construct() {
+
+        parent::_construct();
+        $this->_init('hackathongi_eshopinion/eshopinion');
     }
 }

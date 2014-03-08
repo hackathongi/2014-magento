@@ -63,6 +63,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </client_token>
+                        <cron_interval>
+                            <label><![CDATA[Interval for send orders]]></label>
+                            <comment><![CDATA[0 = Every time that cron is executed, 1 = Every day, 2 = Two days ...]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cron_interval>
 
                         <active_since translate="label comment">
                             <label><![CDATA[Installation date]]></label>

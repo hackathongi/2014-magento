@@ -13,7 +13,8 @@ class Hackathongirona_Eshopinion_Helper_Data extends Mage_Core_Helper_Abstract
 {
     const CONFIG_PATH_MODULE_IS_ACTIVE = 'hackathongi_eshopinion/eshopinion_status/active';
     const CONFIG_PATH_ACTIVE_SINCE = 'hackathongi_eshopinion/eshopinion_config/active_since';
-    const CONFIG_PATH_LAST_CRONE = 'hackathongi_eshopinion/eshopinion_config/last_cron';
+    const CONFIG_PATH_CRON_INTERVAL = 'hackathongi_eshopinion/eshopinion_config/cron_interval';
+    const CONFIG_PATH_LAST_CRON = 'hackathongi_eshopinion/eshopinion_config/last_cron';
     const CONFIG_PATH_API_TOKEN = 'hackathongi_eshopinion/eshopinion_config/token';
 
     /**
@@ -31,7 +32,7 @@ class Hackathongirona_Eshopinion_Helper_Data extends Mage_Core_Helper_Abstract
      * @return mixed
      */
     public function getLastCronDate() {
-        return $this->getLocalizedConfig(self::CONFIG_PATH_LAST_CRONE);
+        return $this->getLocalizedConfig(self::CONFIG_PATH_LAST_CRON);
     }
 
     /**
@@ -41,6 +42,24 @@ class Hackathongirona_Eshopinion_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getInstallationDate() {
         return $this->getLocalizedConfig(self::CONFIG_PATH_ACTIVE_SINCE);
+    }
+
+    /**
+     * Get date when module has installed
+     *
+     * @return mixed
+     */
+    public function getCronInterval() {
+        return $this->getLocalizedConfig(self::CONFIG_PATH_CRON_INTERVAL);
+    }
+
+    /**
+     * Get api client token
+     *
+     * @return mixed
+     */
+    public function getApiToken() {
+        return $this->getLocalizedConfig(self::CONFIG_PATH_API_TOKEN);
     }
 
     /**

@@ -65,54 +65,7 @@
                 </connection>
             </hackathongi_eshopinion_read>
         </resources>
-        <!--
-        <events>
-            <catalog_product_load_after>
-                <observers>
-                    <hackathongi_eshopinion>
-                        <class>hackathongi_eshopinion/observer</class>
-                        <method>catalogProductLoadAfter</method>
-                    </hackathongi_eshopinion>
-                </observers>
-            </catalog_product_load_after>
-        </events>
-        -->
     </global>
-    <!--<frontend>
-
-        <routers>
-           <hackathongi_eshopinion>
-               <use>standard</use>
-               <args>
-                   <module>Hackathongirona_Eshopinion</module>
-                   <frontName>mgt</frontName>
-               </args>
-           </hackathongi_eshopinion>
-        </routers>
-        -->
-        <!--
-        <layout>
-            <updates>
-                <hackathongi_eshopinion>
-                    <file>hackathongi_eshopinion.xml</file>
-                </hackathongi_eshopinion>
-            </updates>
-        </layout>
-
-    </frontend> -->
-    <!--
-    <admin>
-        <routers>
-            <adminhtml>
-                <args>
-                    <modules>
-                        <Hackathongirona_Eshopinion before="Mage_Adminhtml">Hackathongirona_Eshopinion_Adminhtml</Hackathongirona_Eshopinion>
-                    </modules>
-                </args>
-            </adminhtml>
-        </routers>
-    </admin>
-    -->
     <crontab>
         <jobs>
             <hackathongi_eshopinion_send_to_api>
@@ -125,4 +78,11 @@
             </hackathongi_eshopinion_send_to_api>
         </jobs>
     </crontab>
+    <default>
+        <hackathongi_eshopinion>
+            <eshopinion_config>
+                <cron_interval>0</cron_interval>
+            </eshopinion_config>
+        </hackathongi_eshopinion>
+    </default>
 </config>
