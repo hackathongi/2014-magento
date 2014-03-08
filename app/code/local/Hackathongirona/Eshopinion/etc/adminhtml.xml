@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Module for Eshopinion service
+ *
+ * @category    Hackathongirona
+ * @package     Hackathongirona_Eshopinion
+ * @author      Hackathon Girona 2014
+ * @author      Rubén González <rbngzlv@gmail.com>
+ * @license     http://opensource.org/licenses/MIT  The MIT License (MIT)
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <hackathongi_eshopinion translate="title" module="hackathongi_eshopinion">
+                                        <title>Eshopinion</title>
+                                        <sort_order>50</sort_order>
+                                    </hackathongi_eshopinion>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

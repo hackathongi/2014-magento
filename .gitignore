@@ -20,6 +20,7 @@ atlassian-ide-plugin.xml
 .htaccess.sample
 api.php
 app/code/community/Cm/
+app/etc/local.xml
 app/etc/modules/Cm_RedisSession.xml
 app/etc/modules/Mage_Api2.xml
 app/etc/modules/Mage_Captcha.xml
@@ -28,6 +29,7 @@ app/etc/modules/Mage_Oauth.xml
 lib/Magento/
 lib/Cm/
 lib/Credis/
+media/catalog
 media/dhl
 
 ### MAGENTO ###

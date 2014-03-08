@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Module for Eshopinion service
+ *
+ * @category    Hackathongirona
+ * @package     Hackathongirona_Eshopinion
+ * @author      Hackathon Girona 2014
+ * @author      Rubén González <rbngzlv@gmail.com>
+ * @license     http://opensource.org/licenses/MIT  The MIT License (MIT)
+ */
+-->
+<config>
+    <modules>
+        <Hackathongirona_Eshopinion>
+            <version>1.0.0</version>
+        </Hackathongirona_Eshopinion>
+    </modules>
+    <global>
+        <blocks>
+            <hackathongi_eshopinion>
+                <class>Hackathongirona_Eshopinion_Block</class>
+            </hackathongi_eshopinion>
+            <hackathongi_eshopinion_adminhtml>
+                <class>Hackathongirona_Eshopinion_Block_Adminhtml</class>
+            </hackathongi_eshopinion_adminhtml>
+        </blocks>
+        <models>
+            <hackathongi_eshopinion>
+                <class>Hackathongirona_Eshopinion_Model</class>
+                <resourceModel>hackathongi_eshopinion_mysql4</resourceModel>
+            </hackathongi_eshopinion>
+            <hackathongi_eshopinion_mysql4>
+                <class>Hackathongirona_Eshopinion_Model_Mysql4</class>
+                <entities>
+                    <hackathongi_eshopinion>
+                        <table>hackathongi_eshopinion</table>
+                    </hackathongi_eshopinion>
+                </entities>
+            </hackathongi_eshopinion_mysql4>
+        </models>
+        <helpers>
+            <hackathongi_eshopinion>
+                <class>Hackathongirona_Eshopinion_Helper</class>
+            </hackathongi_eshopinion>
+        </helpers>
+        <resources>
+            <hackathongi_eshopinion_setup>
+                <setup>
+                    <module>Hackathongirona_Eshopinion</module>
+                    <class>Hackathongirona_Eshopinion_Model_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </hackathongi_eshopinion_setup>
+            <hackathongi_eshopinion_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </hackathongi_eshopinion_write>
+            <hackathongi_eshopinion_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </hackathongi_eshopinion_read>
+        </resources>
+        <!--
+        <events>
+            <catalog_product_load_after>
+                <observers>
+                    <hackathongi_eshopinion>
+                        <class>hackathongi_eshopinion/observer</class>
+                        <method>catalogProductLoadAfter</method>
+                    </hackathongi_eshopinion>
+                </observers>
+            </catalog_product_load_after>
+        </events>
+        -->
+    </global>
+    <!--<frontend>
+
+        <routers>
+           <hackathongi_eshopinion>
+               <use>standard</use>
+               <args>
+                   <module>Hackathongirona_Eshopinion</module>
+                   <frontName>mgt</frontName>
+               </args>
+           </hackathongi_eshopinion>
+        </routers>
+        -->
+        <!--
+        <layout>
+            <updates>
+                <hackathongi_eshopinion>
+                    <file>hackathongi_eshopinion.xml</file>
+                </hackathongi_eshopinion>
+            </updates>
+        </layout>
+
+    </frontend> -->
+    <!--
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Hackathongirona_Eshopinion before="Mage_Adminhtml">Hackathongirona_Eshopinion_Adminhtml</Hackathongirona_Eshopinion>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    -->
+    <crontab>
+        <jobs>
+            <hackathongi_eshopinion_send_to_api>
+                <schedule>
+                    <cron_expr>50 2 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>hackathongi_eshopinion/observer::sendShipmentsToApi</model>
+                </run>
+            </hackathongi_eshopinion_send_to_api>
+        </jobs>
+    </crontab>
+</config>

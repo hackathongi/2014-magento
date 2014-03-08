@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+     <modules>
+         <Hackathongirona_Eshopinion>
+             <active>true</active>
+             <codePool>local</codePool>
+         </Hackathongirona_Eshopinion>
+         <depends>
+             <Mage_Adminhtml />
+         </depends>
+     </modules>
+</config>
