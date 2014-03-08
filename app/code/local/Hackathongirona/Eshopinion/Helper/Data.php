@@ -15,7 +15,7 @@ class Hackathongirona_Eshopinion_Helper_Data extends Mage_Core_Helper_Abstract
     const CONFIG_PATH_ACTIVE_SINCE = 'hackathongi_eshopinion/eshopinion_config/active_since';
     const CONFIG_PATH_CRON_INTERVAL = 'hackathongi_eshopinion/eshopinion_config/cron_interval';
     const CONFIG_PATH_LAST_CRON = 'hackathongi_eshopinion/eshopinion_config/last_cron';
-    const CONFIG_PATH_API_TOKEN = 'hackathongi_eshopinion/eshopinion_config/token';
+    const CONFIG_PATH_API_TOKEN = 'hackathongi_eshopinion/eshopinion_config/client_token';
 
     /**
      * Get if module is active
